@@ -10,97 +10,54 @@
 <body>
   <header class="site-header">
     <a class="logo" href="#top">gatekeep<span>.fm</span></a>
-    <nav>
-      <a href="#charts">Charts</a>
-      <a href="#radar">Radar</a>
-      <a href="#about">About</a>
-    </nav>
+    <nav><a href="#charts">Charts</a><a href="#radar">Radar</a><a href="#about">About</a></nav>
     <button class="pill" data-random>Put me on</button>
   </header>
-
   <main>
     <section class="hero" id="top">
       <div>
-        <p class="eyebrow">Underground signal tracker / demo edition</p>
+        <p class="eyebrow">Underground streaming tracker</p>
         <h1>See who’s next<br>before your feed does.</h1>
         <p class="intro">Streaming momentum, scene heat, and suspiciously early discoveries. No label math. No industry speeches.</p>
-        <div class="actions">
-          <a class="button dark" href="#charts">Open the chart</a>
-          <button class="link-button" data-random>Random discovery →</button>
-        </div>
+        <div class="actions"><a class="button dark" href="#charts">Open the chart</a><button class="link-button" data-random>Random discovery →</button></div>
       </div>
       <aside class="signal-card">
-        <div class="card-top"><span>Fastest signal</span><span>● Live-ish</span></div>
-        <strong class="huge">#06</strong>
-        <h2>Nine Vicious</h2>
-        <p>31.8% weekly velocity</p>
-        <div class="bars" aria-hidden="true">
-          <i style="height:34%"></i><i style="height:47%"></i><i style="height:42%"></i>
-          <i style="height:61%"></i><i style="height:57%"></i><i style="height:74%"></i>
-          <i style="height:88%"></i><i style="height:79%"></i><i style="height:96%"></i>
-        </div>
+        <div class="card-top"><span>Fastest signal</span><span>● Jul 2026</span></div>
+        <strong class="huge">#01</strong><h2>OsamaSon</h2><p>1.05M daily Spotify streams</p>
+        <div class="bars" aria-hidden="true"><i style="height:34%"></i><i style="height:47%"></i><i style="height:42%"></i><i style="height:61%"></i><i style="height:57%"></i><i style="height:74%"></i><i style="height:88%"></i><i style="height:79%"></i><i style="height:96%"></i></div>
       </aside>
     </section>
-
-    <div class="ticker">
-      <span>Trending now</span><b>OsamaSon ↑18.7%</b><b>2hollis ↑26.4%</b>
-      <b>Nine Vicious ↑31.8%</b><b>xaviersobased ↑15.1%</b>
-    </div>
-
+    <div class="ticker"><span>Daily leaders</span><b>OsamaSon 1.05M</b><b>2hollis 1.03M</b><b>Che 1.01M</b><b>Nettspend 851K</b></div>
     <section class="chart-section" id="charts">
       <div class="heading">
-        <div><p class="eyebrow">Updated whenever we feel like it</p><h2>Underground 10</h2></div>
-        <p class="notice">Prototype numbers for layout testing—not official Spotify data.</p>
+        <div><p class="eyebrow">Latest public snapshots</p><h2>Underground 10</h2></div>
+        <p class="notice">Spotify stream totals tracked by Kworb. Source dates vary by artist; these are snapshots, not live counters.</p>
       </div>
-
       <div class="controls">
         <label class="search"><span>⌕</span><input id="search" placeholder="Search artist or track"></label>
         <div class="filters" id="filters"></div>
-        <label class="sort">Sort
-          <select id="sort">
-            <option value="score">Heat score</option>
-            <option value="daily">Daily streams</option>
-            <option value="change">Weekly change</option>
-          </select>
-        </label>
+        <label class="sort">Sort<select id="sort"><option value="daily">Daily streams</option><option value="total">Total streams</option><option value="topStreams">Top track streams</option></select></label>
       </div>
-
       <div class="table">
-        <div class="table-head">
-          <span>Rank / artist</span><span>Scene</span><span>Monthly listeners</span>
-          <span>Daily streams</span><span>7-day</span><span>Heat</span>
-        </div>
+        <div class="table-head"><span>Rank / artist</span><span>Scene</span><span>Total streams</span><span>Daily streams</span><span>Tracks</span><span>Source</span></div>
         <div id="chart"></div>
       </div>
     </section>
-
     <section class="radar" id="radar">
       <div><p class="eyebrow">The radar</p><h2>Three signals worth watching.</h2></div>
       <div class="radar-grid">
-        <article><span>01</span><h3>Breakout velocity</h3><p>Nine Vicious is moving fastest this week across the demo chart.</p></article>
-        <article><span>02</span><h3>Scene crossover</h3><p>Electronic textures are leaking into rage and jerk playlists.</p></article>
-        <article><span>03</span><h3>Gatekeep index</h3><p>The lower the listeners and higher the growth, the louder the group chat.</p></article>
+        <article><span>01</span><h3>Daily leader</h3><p>OsamaSon leads this snapshot with just over one million daily Spotify streams.</p></article>
+        <article><span>02</span><h3>Catalog signal</h3><p>2hollis has the biggest top song here: “poster boy” has passed 200 million streams.</p></article>
+        <article><span>03</span><h3>Watch the date</h3><p>Each row shows its source date so older snapshots never get mistaken for live data.</p></article>
       </div>
     </section>
   </main>
-
-  <footer id="about">
-    <a class="logo" href="#top">gatekeep<span>.fm</span></a>
-    <p>Stats for people who swear they heard it first.</p>
-    <p>© 2026 Gatekeep · Demo data · Built for discovery</p>
-  </footer>
-
+  <footer id="about"><a class="logo" href="#top">gatekeep<span>.fm</span></a><p>Stats for people who swear they heard it first.</p><p>© 2026 Gatekeep · Streaming data sourced from Kworb · Built for discovery</p></footer>
   <div class="modal-wrap" id="modal" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="pick-name">
-      <button class="close" id="close" aria-label="Close">×</button>
-      <p class="eyebrow">Today’s assignment</p>
-      <span class="album" id="pick-mark"></span>
-      <h2 id="pick-name"></h2>
-      <p id="pick-track"></p>
-      <button class="button dark" data-random>Nah, pick again</button>
+      <button class="close" id="close" aria-label="Close">×</button><p class="eyebrow">Today’s assignment</p><span class="album" id="pick-mark"></span><h2 id="pick-name"></h2><p id="pick-track"></p><button class="button dark" data-random>Nah, pick again</button>
     </section>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

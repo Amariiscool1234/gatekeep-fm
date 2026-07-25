@@ -10,3 +10,20 @@
 .modal-wrap{position:fixed;inset:0;background:rgba(17,17,15,.72);display:grid;place-items:center;padding:20px;z-index:10}.modal-wrap[hidden]{display:none}.modal{width:min(440px,100%);background:var(--paper);border:1px solid var(--ink);padding:38px;position:relative;box-shadow:14px 14px 0 var(--acid)}.close{position:absolute;right:14px;top:10px;border:0;background:none;font-size:30px;cursor:pointer}.modal .album{width:95px;height:95px;font-size:25px;margin-bottom:28px}.modal h2{font-size:54px;word-break:break-word}.modal>p:not(.eyebrow){color:var(--muted);margin:16px 0 28px}
 @media(max-width:950px){.site-header{grid-template-columns:1fr auto}nav{display:none}.hero{grid-template-columns:1fr}.signal-card{justify-self:start;width:330px}.controls{grid-template-columns:1fr}.table-head{display:none}.artist-row{grid-template-columns:2fr 1fr 1fr}.artist-row>:nth-child(2),.artist-row>:nth-child(3),.artist-row>:nth-child(6){display:none}.radar{grid-template-columns:1fr}}
 @media(max-width:650px){.hero{min-height:0;padding-block:58px}h1{font-size:clamp(52px,17vw,78px)}.actions{align-items:flex-start;flex-direction:column;gap:7px}.signal-card{width:calc(100% - 12px)}.heading{align-items:start;flex-direction:column}.notice{text-align:left}.artist-row{grid-template-columns:1fr auto;padding-inline:4px}.artist-row>:nth-child(2),.artist-row>:nth-child(3),.artist-row>:nth-child(4),.artist-row>:nth-child(6){display:none}.radar-grid{grid-template-columns:1fr}.radar-grid article{min-height:220px;border-right:0;border-bottom:1px solid #3a3935}footer{align-items:flex-start;flex-direction:column}}
+
+/* Sourced streaming snapshot */
+.table-head,.artist-row{grid-template-columns:2fr .8fr 1fr 1fr .55fr 1.2fr}
+.source-cell{display:flex;flex-direction:column;gap:5px}
+.source-cell small{color:var(--muted)}
+.source-cell span{display:flex;gap:9px}
+.source-cell a{font-size:11px;font-weight:900;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:950px){
+  .artist-row{grid-template-columns:2fr 1fr 1.2fr}
+  .artist-row>:nth-child(2),.artist-row>:nth-child(3),.artist-row>:nth-child(5){display:none}
+  .artist-row>:nth-child(6){display:flex}
+}
+@media(max-width:650px){
+  .artist-row{grid-template-columns:1fr auto}
+  .artist-row>:nth-child(2),.artist-row>:nth-child(3),.artist-row>:nth-child(4),.artist-row>:nth-child(5){display:none}
+  .artist-row>:nth-child(6){display:flex}
+}
